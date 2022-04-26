@@ -1,0 +1,878 @@
+{
+	"info": {
+		"_postman_id": "bd891e16-f7c7-4923-a5f3-7d7d640d5653",
+		"name": "online book store",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "book catalogue",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "redirect_uri",
+							"value": "http://onlinebookstore-env.eba-pi8mmxgm.us-west-2.elasticbeanstalk.com/login/oauth2/code/github",
+							"type": "string"
+						},
+						{
+							"key": "useBrowser",
+							"value": false,
+							"type": "boolean"
+						},
+						{
+							"key": "client_authentication",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "grant_type",
+							"value": "authorization_code",
+							"type": "string"
+						},
+						{
+							"key": "scope",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "https://github.com/login/oauth/access_token",
+							"type": "string"
+						},
+						{
+							"key": "authUrl",
+							"value": "https://github.com/login/oauth/authorize",
+							"type": "string"
+						},
+						{
+							"key": "accessToken",
+							"value": "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",
+							"type": "string"
+						},
+						{
+							"key": "tokenType",
+							"value": "bearer",
+							"type": "string"
+						},
+						{
+							"key": "tokenName",
+							"value": "token",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "headerPrefix",
+							"value": "Bearer",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "9f0dfd161889265f6f3c3027242f0bcf072f67f5",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "077f6f94c18b323d3fb6",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://Onlinebookstore-env.eba-pi8mmxgm.us-west-2.elasticbeanstalk.com/v1/book/catalogue",
+					"protocol": "http",
+					"host": [
+						"Onlinebookstore-env",
+						"eba-pi8mmxgm",
+						"us-west-2",
+						"elasticbeanstalk",
+						"com"
+					],
+					"path": [
+						"v1",
+						"book",
+						"catalogue"
+					]
+				},
+				"description": "This returns list of books available to order"
+			},
+			"response": [
+				{
+					"name": "book catalogue",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://Onlinebookstore-env.eba-pi8mmxgm.us-west-2.elasticbeanstalk.com/v1/book/catalogue",
+							"protocol": "http",
+							"host": [
+								"Onlinebookstore-env",
+								"eba-pi8mmxgm",
+								"us-west-2",
+								"elasticbeanstalk",
+								"com"
+							],
+							"path": [
+								"v1",
+								"book",
+								"catalogue"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 26 Apr 2022 12:57:34 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Server",
+							"value": "nginx/1.20.0"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 1,\n        \"isbn\": \"0001\",\n        \"name\": \"AgileHandbook\",\n        \"author\": \"Santhosh\",\n        \"year\": \"2000\",\n        \"description\": \"Tells about Agile in detail\",\n        \"quantity\": \"20\"\n    },\n    {\n        \"id\": 2,\n        \"isbn\": \"0002\",\n        \"name\": \"SafeAgile\",\n        \"author\": \"Steve\",\n        \"year\": \"2005\",\n        \"description\": \"Tells about Safe Agile In Detail\",\n        \"quantity\": \"30\"\n    },\n    {\n        \"id\": 3,\n        \"isbn\": \"0003\",\n        \"name\": \"Physics\",\n        \"author\": \"Santhosh\",\n        \"year\": \"2000\",\n        \"description\": \"Tells about Agile in detail\",\n        \"quantity\": \"20\"\n    },\n    {\n        \"id\": 4,\n        \"isbn\": \"0004\",\n        \"name\": \"Chemistry\",\n        \"author\": \"satheesh\",\n        \"year\": \"2005\",\n        \"description\": \"Tells about Safe Agile In Detail\",\n        \"quantity\": \"30\"\n    },\n    {\n        \"id\": 5,\n        \"isbn\": \"0005\",\n        \"name\": \"English\",\n        \"author\": \"Santhosh\",\n        \"year\": \"2000\",\n        \"description\": \"Tells about Agile in detail\",\n        \"quantity\": \"20\"\n    },\n    {\n        \"id\": 6,\n        \"isbn\": \"0006\",\n        \"name\": \"Dummy Book\",\n        \"author\": \"Steve\",\n        \"year\": \"2005\",\n        \"description\": \"Tells about Safe Agile In Detail\",\n        \"quantity\": \"30\"\n    },\n    {\n        \"id\": 7,\n        \"isbn\": \"0007\",\n        \"name\": \"Maths\",\n        \"author\": \"Mulanga\",\n        \"year\": \"2000\",\n        \"description\": \"Tells about Agile in detail\",\n        \"quantity\": \"20\"\n    },\n    {\n        \"id\": 8,\n        \"isbn\": \"0008\",\n        \"name\": \"C++\",\n        \"author\": \"Steve\",\n        \"year\": \"2005\",\n        \"description\": \"Tells about Safe Agile In Detail\",\n        \"quantity\": \"10\"\n    },\n    {\n        \"id\": 9,\n        \"isbn\": \"0009\",\n        \"name\": \"Java\",\n        \"author\": \"Sean\",\n        \"year\": \"2000\",\n        \"description\": \"Tells about Agile in detail\",\n        \"quantity\": \"20\"\n    },\n    {\n        \"id\": 10,\n        \"isbn\": \"0010\",\n        \"name\": \"Ruby\",\n        \"author\": \"sachin\",\n        \"year\": \"2005\",\n        \"description\": \"Tells about Safe Agile In Detail\",\n        \"quantity\": \"30\"\n    },\n    {\n        \"id\": 11,\n        \"isbn\": \"0011\",\n        \"name\": \"python\",\n        \"author\": \"Kay\",\n        \"year\": \"2000\",\n        \"description\": \"Tells about Agile in detail\",\n        \"quantity\": \"20\"\n    },\n    {\n        \"id\": 12,\n        \"isbn\": \"0012\",\n        \"name\": \"CSE fundamentals\",\n        \"author\": \"Steve\",\n        \"year\": \"2005\",\n        \"description\": \"Tells about Safe Agile In Detail\",\n        \"quantity\": \"2\"\n    },\n    {\n        \"id\": 13,\n        \"isbn\": \"0013\",\n        \"name\": \"C Programming\",\n        \"author\": \"Santhosh\",\n        \"year\": \"2000\",\n        \"description\": \"Tells about Agile in detail\",\n        \"quantity\": \"20\"\n    },\n    {\n        \"id\": 14,\n        \"isbn\": \"0014\",\n        \"name\": \"AWS handbook\",\n        \"author\": \"Steve\",\n        \"year\": \"2005\",\n        \"description\": \"Tells about Safe Agile In Detail\",\n        \"quantity\": \"30\"\n    },\n    {\n        \"id\": 15,\n        \"isbn\": \"0015\",\n        \"name\": \"Openshift handbook\",\n        \"author\": \"Santhosh\",\n        \"year\": \"2000\",\n        \"description\": \"Tells about Agile in detail\",\n        \"quantity\": \"20\"\n    },\n    {\n        \"id\": 16,\n        \"isbn\": \"0016\",\n        \"name\": \"Azure handbook\",\n        \"author\": \"Steve\",\n        \"year\": \"2005\",\n        \"description\": \"Tells about Safe Agile In Detail\",\n        \"quantity\": \"4\"\n    },\n    {\n        \"id\": 17,\n        \"isbn\": \"0017\",\n        \"name\": \"GCP handbook\",\n        \"author\": \"Santhosh\",\n        \"year\": \"2000\",\n        \"description\": \"Tells about Agile in detail\",\n        \"quantity\": \"6\"\n    },\n    {\n        \"id\": 18,\n        \"isbn\": \"0018\",\n        \"name\": \"Terraform\",\n        \"author\": \"Steve\",\n        \"year\": \"2005\",\n        \"description\": \"Tells about Safe Agile In Detail\",\n        \"quantity\": \"5\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "order book",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "redirect_uri",
+							"value": "http://onlinebookstore-env.eba-pi8mmxgm.us-west-2.elasticbeanstalk.com/login/oauth2/code/github",
+							"type": "string"
+						},
+						{
+							"key": "useBrowser",
+							"value": false,
+							"type": "boolean"
+						},
+						{
+							"key": "client_authentication",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "grant_type",
+							"value": "authorization_code",
+							"type": "string"
+						},
+						{
+							"key": "scope",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "https://github.com/login/oauth/access_token",
+							"type": "string"
+						},
+						{
+							"key": "authUrl",
+							"value": "https://github.com/login/oauth/authorize",
+							"type": "string"
+						},
+						{
+							"key": "tokenType",
+							"value": "bearer",
+							"type": "string"
+						},
+						{
+							"key": "tokenName",
+							"value": "token",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "headerPrefix",
+							"value": "Bearer",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "9f0dfd161889265f6f3c3027242f0bcf072f67f5",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "077f6f94c18b323d3fb6",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"quantity\":1,\n    \"userName\":\"test01\",\n    \"bookIsbn\":\"0001\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://Onlinebookstore-env.eba-pi8mmxgm.us-west-2.elasticbeanstalk.com/v1/book/order",
+					"protocol": "http",
+					"host": [
+						"Onlinebookstore-env",
+						"eba-pi8mmxgm",
+						"us-west-2",
+						"elasticbeanstalk",
+						"com"
+					],
+					"path": [
+						"v1",
+						"book",
+						"order"
+					]
+				},
+				"description": "This API helps to save the order connfirmed by the member"
+			},
+			"response": [
+				{
+					"name": "order book",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"quantity\":1,\n    \"userName\":\"test01\",\n    \"bookIsbn\":\"0001\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://Onlinebookstore-env.eba-pi8mmxgm.us-west-2.elasticbeanstalk.com/v1/book/order",
+							"protocol": "http",
+							"host": [
+								"Onlinebookstore-env",
+								"eba-pi8mmxgm",
+								"us-west-2",
+								"elasticbeanstalk",
+								"com"
+							],
+							"path": [
+								"v1",
+								"book",
+								"order"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 26 Apr 2022 12:57:10 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Server",
+							"value": "nginx/1.20.0"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"orderId\": 3,\n    \"message\": \"Order has placed order for user :test01 and for isbn: 0001\"\n}"
+				}
+			]
+		},
+		{
+			"name": "get order by isbn",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://Onlinebookstore-env.eba-pi8mmxgm.us-west-2.elasticbeanstalk.com/v1/book/order/isbn/0001",
+					"protocol": "http",
+					"host": [
+						"Onlinebookstore-env",
+						"eba-pi8mmxgm",
+						"us-west-2",
+						"elasticbeanstalk",
+						"com"
+					],
+					"path": [
+						"v1",
+						"book",
+						"order",
+						"isbn",
+						"0001"
+					]
+				},
+				"description": "This API helps to get orders by isbn number"
+			},
+			"response": [
+				{
+					"name": "get order by isbn",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://Onlinebookstore-env.eba-pi8mmxgm.us-west-2.elasticbeanstalk.com/v1/book/order/isbn/0001",
+							"protocol": "http",
+							"host": [
+								"Onlinebookstore-env",
+								"eba-pi8mmxgm",
+								"us-west-2",
+								"elasticbeanstalk",
+								"com"
+							],
+							"path": [
+								"v1",
+								"book",
+								"order",
+								"isbn",
+								"0001"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 26 Apr 2022 12:56:18 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Server",
+							"value": "nginx/1.20.0"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"userName\": \"test02\",\n        \"firstName\": \"TEST02\",\n        \"lastName\": \"smith\",\n        \"isbn\": \"0001\",\n        \"bookName\": \"AgileHandbook\",\n        \"bookAuthor\": \"Santhosh\",\n        \"publicationYear\": \"2000\",\n        \"bookQuantity\": 1\n    },\n    {\n        \"userName\": \"test01\",\n        \"firstName\": \"TEST01\",\n        \"lastName\": \"mallela\",\n        \"isbn\": \"0001\",\n        \"bookName\": \"AgileHandbook\",\n        \"bookAuthor\": \"Santhosh\",\n        \"publicationYear\": \"2000\",\n        \"bookQuantity\": 1\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "get registered users",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "redirect_uri",
+							"value": "http://onlinebookstore-env.eba-pi8mmxgm.us-west-2.elasticbeanstalk.com/login/oauth2/code/github",
+							"type": "string"
+						},
+						{
+							"key": "useBrowser",
+							"value": false,
+							"type": "boolean"
+						},
+						{
+							"key": "client_authentication",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "grant_type",
+							"value": "authorization_code",
+							"type": "string"
+						},
+						{
+							"key": "scope",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "https://github.com/login/oauth/access_token",
+							"type": "string"
+						},
+						{
+							"key": "authUrl",
+							"value": "https://github.com/login/oauth/authorize",
+							"type": "string"
+						},
+						{
+							"key": "tokenType",
+							"value": "bearer",
+							"type": "string"
+						},
+						{
+							"key": "tokenName",
+							"value": "token",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "headerPrefix",
+							"value": "Bearer",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "9f0dfd161889265f6f3c3027242f0bcf072f67f5",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "077f6f94c18b323d3fb6",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://onlinebookstore-env.eba-pi8mmxgm.us-west-2.elasticbeanstalk.com/v1/book/users",
+					"protocol": "http",
+					"host": [
+						"onlinebookstore-env",
+						"eba-pi8mmxgm",
+						"us-west-2",
+						"elasticbeanstalk",
+						"com"
+					],
+					"path": [
+						"v1",
+						"book",
+						"users"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "get registered users",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://onlinebookstore-env.eba-pi8mmxgm.us-west-2.elasticbeanstalk.com/v1/book/users",
+							"protocol": "http",
+							"host": [
+								"onlinebookstore-env",
+								"eba-pi8mmxgm",
+								"us-west-2",
+								"elasticbeanstalk",
+								"com"
+							],
+							"path": [
+								"v1",
+								"book",
+								"users"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 26 Apr 2022 12:56:47 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Server",
+							"value": "nginx/1.20.0"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 1,\n        \"username\": \"test01\",\n        \"firstname\": \"TEST01\",\n        \"lastname\": \"mallela\",\n        \"address\": \"Hyderabad\",\n        \"telephone\": \"0636108965\"\n    },\n    {\n        \"id\": 2,\n        \"username\": \"test02\",\n        \"firstname\": \"TEST02\",\n        \"lastname\": \"smith\",\n        \"address\": \"Midrand\",\n        \"telephone\": \"8056080165\"\n    },\n    {\n        \"id\": 3,\n        \"username\": \"test03\",\n        \"firstname\": \"TEST03\",\n        \"lastname\": \"Steven\",\n        \"address\": \"Hyderabad\",\n        \"telephone\": \"0636108965\"\n    },\n    {\n        \"id\": 4,\n        \"username\": \"test04\",\n        \"firstname\": \"TEST04\",\n        \"lastname\": \"Smith\",\n        \"address\": \"Midrand\",\n        \"telephone\": \"8056080165\"\n    },\n    {\n        \"id\": 5,\n        \"username\": \"test05\",\n        \"firstname\": \"TEST05\",\n        \"lastname\": \"Kay\",\n        \"address\": \"Hyderabad\",\n        \"telephone\": \"0636108965\"\n    },\n    {\n        \"id\": 6,\n        \"username\": \"test06\",\n        \"firstname\": \"TEST06\",\n        \"lastname\": \"Santhan\",\n        \"address\": \"Midrand\",\n        \"telephone\": \"8056080165\"\n    },\n    {\n        \"id\": 7,\n        \"username\": \"test07\",\n        \"firstname\": \"TEST07\",\n        \"lastname\": \"Sunil\",\n        \"address\": \"Hyderabad\",\n        \"telephone\": \"0636108965\"\n    },\n    {\n        \"id\": 8,\n        \"username\": \"test08\",\n        \"firstname\": \"TEST08\",\n        \"lastname\": \"Mo B\",\n        \"address\": \"Midrand\",\n        \"telephone\": \"8056080165\"\n    },\n    {\n        \"id\": 9,\n        \"username\": \"test09\",\n        \"firstname\": \"TEST09\",\n        \"lastname\": \"Rose\",\n        \"address\": \"Hyderabad\",\n        \"telephone\": \"0636108965\"\n    },\n    {\n        \"id\": 10,\n        \"username\": \"test10\",\n        \"firstname\": \"TEST10\",\n        \"lastname\": \"Ketmet\",\n        \"address\": \"Midrand\",\n        \"telephone\": \"8056080165\"\n    },\n    {\n        \"id\": 11,\n        \"username\": \"test11\",\n        \"firstname\": \"sudarshana\",\n        \"lastname\": \"mallela\",\n        \"address\": \"Hyderabad\",\n        \"telephone\": \"0636108965\"\n    },\n    {\n        \"id\": 12,\n        \"username\": \"test12\",\n        \"firstname\": \"steve\",\n        \"lastname\": \"smith\",\n        \"address\": \"Midrand\",\n        \"telephone\": \"8056080165\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "get order by username",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "redirect_uri",
+							"value": "http://onlinebookstore-env.eba-pi8mmxgm.us-west-2.elasticbeanstalk.com/login/oauth2/code/github",
+							"type": "string"
+						},
+						{
+							"key": "useBrowser",
+							"value": false,
+							"type": "boolean"
+						},
+						{
+							"key": "client_authentication",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "grant_type",
+							"value": "authorization_code",
+							"type": "string"
+						},
+						{
+							"key": "scope",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "https://github.com/login/oauth/access_token",
+							"type": "string"
+						},
+						{
+							"key": "authUrl",
+							"value": "https://github.com/login/oauth/authorize",
+							"type": "string"
+						},
+						{
+							"key": "tokenType",
+							"value": "bearer",
+							"type": "string"
+						},
+						{
+							"key": "tokenName",
+							"value": "token",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "headerPrefix",
+							"value": "Bearer",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "9f0dfd161889265f6f3c3027242f0bcf072f67f5",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "077f6f94c18b323d3fb6",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://Onlinebookstore-env.eba-pi8mmxgm.us-west-2.elasticbeanstalk.com/v1/book/order/username/test01",
+					"protocol": "http",
+					"host": [
+						"Onlinebookstore-env",
+						"eba-pi8mmxgm",
+						"us-west-2",
+						"elasticbeanstalk",
+						"com"
+					],
+					"path": [
+						"v1",
+						"book",
+						"order",
+						"username",
+						"test01"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "get order by username",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://Onlinebookstore-env.eba-pi8mmxgm.us-west-2.elasticbeanstalk.com/v1/book/order/username/test01",
+							"protocol": "http",
+							"host": [
+								"Onlinebookstore-env",
+								"eba-pi8mmxgm",
+								"us-west-2",
+								"elasticbeanstalk",
+								"com"
+							],
+							"path": [
+								"v1",
+								"book",
+								"order",
+								"username",
+								"test01"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 26 Apr 2022 12:55:08 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Server",
+							"value": "nginx/1.20.0"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"userName\": \"test01\",\n        \"firstName\": \"TEST01\",\n        \"lastName\": \"mallela\",\n        \"isbn\": \"0001\",\n        \"bookName\": \"AgileHandbook\",\n        \"bookAuthor\": \"Santhosh\",\n        \"publicationYear\": \"2000\",\n        \"bookQuantity\": 1\n    }\n]"
+				}
+			]
+		}
+	]
+}

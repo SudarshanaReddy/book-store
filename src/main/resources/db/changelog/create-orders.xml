@@ -16,6 +16,9 @@
             <column name="bookisbn" type="VARCHAR(255)">
                 <constraints foreignKeyName="fk_bookisbn" referencedTableName="bookcatalogue" referencedColumnNames="isbn" nullable="true"/>
             </column>
+            <column name="quantity" type="NUMERIC">
+                <constraints nullable="false"/>
+            </column>
         </createTable>
         <rollback>
             <dropTable tableName="orders"/>

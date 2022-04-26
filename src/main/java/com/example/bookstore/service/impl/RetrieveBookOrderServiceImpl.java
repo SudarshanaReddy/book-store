@@ -28,6 +28,11 @@ public class RetrieveBookOrderServiceImpl implements RetrieveBookOrderService {
     private UsersRepository usersRepository;
 
     @Override
+    public List<Users> getUsers() {
+        return usersRepository.findAll();
+    }
+
+    @Override
     public List<BookCatalogue> getBookCatalogue() {
         return  bookRepository.findAll();
     }
@@ -54,6 +59,7 @@ public class RetrieveBookOrderServiceImpl implements RetrieveBookOrderService {
                     ordersResponse.setBookAuthor(bookCatalogue.getAuthor());
                     ordersResponse.setBookName(bookCatalogue.getName());
                     ordersResponse.setPublicationYear(bookCatalogue.getYear());
+                    ordersResponse.setBookQuantity(bookOrder.getQuantity());
                 }
             }
             ordersResponseList.add(ordersResponse);
@@ -99,6 +105,7 @@ public class RetrieveBookOrderServiceImpl implements RetrieveBookOrderService {
                     ordersResponse.setBookAuthor(bookCatalogue.getAuthor());
                     ordersResponse.setBookName(bookCatalogue.getName());
                     ordersResponse.setPublicationYear(bookCatalogue.getYear());
+                    ordersResponse.setBookQuantity(bookOrder.getQuantity());
                 }
             }
             ordersResponseList.add(ordersResponse);

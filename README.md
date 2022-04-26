@@ -18,6 +18,10 @@ mvn clean install -DskipTests
 mvn spring-boot:run OR 
 **Download jar from Actions tab summary** and run it with below command
 java -jar <jar-name>
+   
+**
+API security**
+Users should have the GitHub Account annd login with the git hub account to access the API.   
     
 **Git Hub Actions workflow**
     
